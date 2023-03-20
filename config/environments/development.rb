@@ -60,7 +60,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-
+   config.active_job.queue_adapter = :inline
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
@@ -73,5 +73,5 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  config.hosts<<"82d959c993a54c3881df4b1f62826ee1.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  config.hosts.clear
 end
